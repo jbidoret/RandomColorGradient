@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script type="text/javascript" src="../CoreLibrary/FeatureDetection.js"></script>
+        <script type="text/javascript" src="../CoreLibrary/CommonMouseFunctions.js"></script>
+        <script type="text/javascript" src="RandomColorGradient.js"></script>
+    </head>
+    <body>
+
+
+        <h3>HTML5 Canvas Random Gradient Fill Example</h3>
+
+        <canvas id="idRCGCanvas" width="515" height="150"
+                onmousedown="rCG_canvasMouseDown(event)"
+                onmouseup="rCG_canvasMouseUp()"
+                onmouseout="rCG_canvasMouseOut()"
+                onmousemove="rCG_canvasMouseMove(event)"></canvas>
+        <br />
+        <input style="width: 120px;" type="button"
+               onclick="rCG_startStopUpdateCanvas()"
+               id="idRCGStartStopUpdateCanvas" value="Start" />
+        <input style="width: 120px;" type="button"
+               onclick="rCG_toggleGradientType()"
+               id="idRCGToggleGradientTypeButton" value="Linear" />
+    </body>
+</html>
