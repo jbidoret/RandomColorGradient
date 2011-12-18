@@ -1,3 +1,6 @@
+// Copyright 2011 Scott Sanbar.  See COPYRIGHT file for details
+// Original Author:  Scott Sanbar - scott.sanbar@gmail.com
+
 function rCG_getRandomColor() {
     var pre = "#000000"
     var color = Math.floor(Math.random()
