@@ -89,8 +89,7 @@ function rCG_updateCanvas() {
         gRCGContext.fillStyle = grd;
         gRCGContext.fillRect(0, 0, gRCGCanvasWidth, gRCGCanvasHeight);
     } catch (err) {
-        alert("Error in updateCanvas(): " + err.message
-            + " Line Number: " + err.lineNumber);
+        exceptionAlert("RandomColorGradient: rCG_updateCanvas", "", err);
     }
 }
 function rCG_startStopUpdateCanvas() {
