@@ -1,6 +1,3 @@
 [submodule "Libraries/CoreLibrary"]
 	path = Libraries/CoreLibrary
 	url = git://github.com/sanbar/CoreLibrary.git
-[submodule "Libraries/PhysicsLibrary"]
-	path = Libraries/PhysicsLibrary
-	url = git://github.com/sanbar/PhysicsLibrary.git
