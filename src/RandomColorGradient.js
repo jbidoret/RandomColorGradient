@@ -34,6 +34,7 @@ function rCG_initGlobals() {
     gRCGMouseDown = false;
 }
 function rCG_updateCanvas() {
+    var loc = "::RandomColorGradient::rCG_updateCanvas()";
     if ((typeof gRCGColors != "undefined") &&
         (gRCGAllowAnimation)) {
         gRCGDelta++;
@@ -89,12 +90,13 @@ function rCG_updateCanvas() {
         gRCGContext.fillStyle = grd;
         gRCGContext.fillRect(0, 0, gRCGCanvasWidth, gRCGCanvasHeight);
     } catch (err) {
-        exceptionAlert("::RandomColorGradient::rCG_updateCanvas()", err);
+        exceptionAlert(loc, err);
     }
 }
 function rCG_startStopUpdateCanvas() {
+    var loc = "::RandomCanvasGradient::rCG_startStopUpdateCanvas()"
     if (!isCanvasSupported()) {
-        alertNotSupported();
+        exceptionAlert(loc, null, stringNotSupported());
         return;
     }
     if (typeof gRCGColors == "undefined") {
@@ -109,15 +111,14 @@ function rCG_startStopUpdateCanvas() {
             clearInterval(gRCGIntervalID);
             gRCGStartStopUpdateCanvasButton.value = "Start";
         }
-    } catch (err) {
-        alert("Error in startStopUpdatecanvas(): "
-            + err.message
-            + " Line Number: " + err.lineNumber);
+    } catch (e) {
+        exceptionAlert(loc, e);
     }
 }
 function rCG_toggleGradientType() {
+    var loc = "::RandomCanvasGradient::rCG_toggleGradientType()"
     if (!isCanvasSupported()) {
-        alertNotSupported();
+        exceptionAlert(loc, null, stringNotSupported());
         return;
     }
     if (typeof gRCGColors == "undefined") {
@@ -134,10 +135,8 @@ function rCG_toggleGradientType() {
             rCG_updateCanvas();
             gRCGAllowAnimation = true;
         }
-    } catch (err) {
-        alert("Error in toggleGradientType(): "
-            + err.message
-            + " Line Number: " + err.lineNumber);
+    } catch (e) {
+        exceptionAlert(loc, e);
     }
 }
 function rCG_canvasMouseUp() {
