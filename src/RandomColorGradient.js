@@ -1,15 +1,6 @@
 // Copyright 2011 Scott Sanbar.  See COPYRIGHT file for details
 // Original Author:  Scott Sanbar - scott.sanbar@gmail.com
 
-function rCG_getRandomColor() {
-    var pre = "#000000"
-    var color = Math.floor(Math.random()
-        * 0x1000000).toString(16);
-    color = pre.substring(0,
-        pre.length - color.length) + color;
-
-    return color;
-}
 function rCG_initGlobals() {
     G_RCG_DELTA_MAX = 50.0;
     G_RCG_ORIGIN_X_MIN = 7;
@@ -18,7 +9,7 @@ function rCG_initGlobals() {
     gRCGDelta = 0;
     gRCGColors = new Array();
     for (var i = 0; i < 10; i++ ) {
-        gRCGColors[i] = rCG_getRandomColor();
+        gRCGColors[i] = getRandomColor();
     }
     gRCGCanvas = document.
         getElementById("idRCGCanvas");
@@ -45,7 +36,7 @@ function rCG_updateCanvas() {
                 gRCGColorsHead = gRCGColors.length - 1;
             }
             gRCGColors[gRCGColorsHead] =
-                rCG_getRandomColor();
+                getRandomColor();
         }
     }
     try {
