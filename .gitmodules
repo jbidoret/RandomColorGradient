@@ -1,3 +1,6 @@
 [submodule "Libraries/CoreLibrary"]
 	path = Libraries/CoreLibrary
 	url = git://github.com/sanbar/CoreLibrary.git
+[submodule "Libraries/GraphicsLibrary"]
+	path = Libraries/GraphicsLibrary
+	url = git://github.com/sanbar/GraphicsLibrary.git
