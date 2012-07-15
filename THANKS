@@ -1,5 +1,26 @@
 Thanks to the following people for their help on this project:
 
+Date...: May-2012 and on
+Nick...: FireFly (on the irc.freenode.net ##javascript channel)
+Name...: Jonas Höglund
+email..: unknown
+website: http://firefly.nu
+
+FireFly has been very instrumental in helping me learn JavaScript properly,
+along with man others in the irc.freenode.net ##javascript channel.
+
+Most especially, he and others like (nicks) Mortchek and Sorella helped me
+get a better handle on a "somewhat pure", efficient way to accomplish
+prototypal inheritance in JavaScript which I will be employing in place
+of the code that was given me by ApOgEE below.  Data hiding is sacrificed for
+for reducing code duplication and better alignment with intended design
+patterns.  I believe this is a sound tradeoff at this time.
+
+The deep insights they have given me are much appreciated, and resulted in
+my ability to formulate an "inheritance factory" function that is both simple
+and powerful.  A better version called "extend" by FireFly is what I may
+actually be using.  It depends on performance of the two methods.
+
 Date...: Late December of 2011
 Nick...: ApOgEE (on irc.freenode.net)
 Name...: M. Fauzilkamil Zainuddin
